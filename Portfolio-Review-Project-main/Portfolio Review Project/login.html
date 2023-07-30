@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+
+	<style>
+		
+         body {
+	           background-image: url("./images/log2.jpg");
+	            background-repeat: no-repeat;
+	            background-size: cover;}
+	</style>
+</head>
+<body>
+	<div class="container vh-100">
+		<div class="row justify-content-center h-100">
+			<div class="card w-25 my-auto shadow">
+				<div class="card-header text-center bg-primary text-white">
+					<h2>Login Form</h2>
+				</div>
+				<div class="card-body">
+					<form action="index.html" method="" id="loginForm">
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" id="email" class="form-control" name="" />
+						</div>
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input type="password" id="password" class="form-control" name="" />
+						</div>
+						<input type="submit" class="btn btn-primary w-100" value="Login" name="">
+					</form>
+					<div class="text-center my-3">
+						<span>Don't have an account? </span>
+						<a href="./register.html">Sign up</a>
+					</div>
+				</div>
+				<div class="card-footer text-right">
+					<small>&copy;  Jaswanth Reddy</small>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// get the form element
+		const form = document.getElementById('loginForm');
+	
+		 // add event listener for form submit
+		form.addEventListener('submit', (event) => {
+			event.preventDefault(); // prevent the form from submitting
+	
+			// get the user input values
+			const email = document.getElementById('email').value;
+			const password = document.getElementById('password').value;
+	
+			// check if the email and password are correct
+
+
+
+			if ((email === 'saipradeepchinta18@gmail.com' && password === 'Pradeep@123') || 
+              (email === 'anand18@gmail.com' && password === 'Anand@123') ||
+             (email === 'suradashridhar@gmail.com' && password === 'Shridhar@123')) {
+                 alert('Login successful!');
+
+				 window.location.href = 'index.html';
+                   } else {
+                          alert('Invalid email or password');
+				   }
+		
+		});
+	</script>
+</body>
+</html>
